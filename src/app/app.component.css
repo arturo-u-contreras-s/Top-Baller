@@ -1,0 +1,15 @@
+.outer-container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  height: 7%;
+}
+
+.router {
+  height: 93%;
+}

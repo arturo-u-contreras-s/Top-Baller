@@ -1,0 +1,35 @@
+.outer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+
+  border: 1px solid black;
+  background-color: black;
+}
+
+.title-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 13%;
+  height: 85%;
+
+  font-size: 40px;
+  background-color: white;
+  color: black;
+
+  cursor: pointer;
+}
+
+.title-item:hover {
+  color: #3f0596;
+}
+
+img {
+  width: 30px;
+}

@@ -1,0 +1,108 @@
+<div class="outer-container">
+  <div class="left" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <div class="podium" *ngIf="podium">
+      <div class="first-place">
+        <div class="right-winner">
+          <div class="crown">
+            <img src="assets/ui-images/crown1.png" alt="1st Place Crown"/>
+          </div>
+          <div class="fp-score">
+            {{ scoreboard[0][1] }}
+          </div>
+        </div>
+        <div class="left-winner">
+          <img src="assets/ui-images/neymar.png" alt="First Place"/>
+          <div class="fp-un">
+            {{ scoreboard[0][0] }}
+          </div>
+        </div>
+      </div>
+
+
+      <div class="losers">
+        <div class="loser">
+          <div class="loser-left">
+            <div class="loser-score">
+              {{ scoreboard[1][1] }}
+            </div>
+          </div>
+          <div class="loser-right">
+            <div class="place">
+              2ND
+            </div>
+            <div class="loser-un">
+              {{ scoreboard[1][0] }}
+            </div>
+          </div>
+        </div>
+        <div class="loser">
+          <div class="loser-left">
+            <div class="loser-score">
+              {{ scoreboard[2][1] }}
+            </div>
+          </div>
+          <div class="loser-right">
+            <div class="place">
+              3RD
+            </div>
+            <div class="loser-un">
+              {{ scoreboard[2][0] }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="see-lb">
+        See full leaderboard <i class="fa fa-arrow-right"></i>
+      </div>
+    </div>
+
+
+    <div class="leaderboard" *ngIf="!podium">
+      <div class="header">
+        STANDINGS
+      </div>
+      <div class="player" *ngFor="let player of scoreboard">
+        <div class="user-score">
+          {{ player[1] }}
+        </div>
+        <div class="user-name">
+          {{ player[0] }}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="right">
+    <div class="go-home-section">
+      <div class="go-home" (click)="goHome()">
+        Go Home <i class="fa fa-arrow-right"></i>
+      </div>
+    </div>
+    <div class="player-score">
+      <div class="crown" *ngIf="topBaller">
+        <img src="assets/ui-images/crown1.png" alt="1st Place Crown"/>
+      </div>
+      <div class="score-num">
+        {{ score }}
+      </div>
+    </div>
+    <div class="info">
+      <div class="top-baller" *ngIf="!topBaller">
+        <div>Back to training.</div>
+        <div>You arent at the top yet.</div>
+      </div>
+      <div class="top-baller" *ngIf="topBaller">
+        <div>YOU ARE THE TOP BALLER.</div>
+        <div>But for how long?</div>
+      </div>
+      <div class="stat">
+      </div>
+    </div>
+    <div class="options">
+      <button (click)="playAgain()">PLAY AGAIN</button>
+    </div>
+  </div>
+</div>
+

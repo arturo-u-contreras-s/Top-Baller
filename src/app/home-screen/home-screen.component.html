@@ -1,0 +1,69 @@
+<div class="outer-container">
+  <div class="game-modes">
+    <div class="gm-heading">
+      Game Modes
+    </div>
+    <div class="modes">
+      <div class="mode-section" (mouseenter)="onMouseEnter(1)" (mouseleave)="onMouseLeave(1)" [ngClass]="'mode' + 1">
+        <div class="mode-name" *ngIf="!m1hover">
+          Career
+        </div>
+        <div class="mode-details" *ngIf="m1hover">
+          <div class="mode-name" [ngClass]="'mode' + 1">
+            Career
+          </div>
+          <div class="description">
+            <div>Objective:</div>
+            <div>Match the correct player to a list of their former clubs.</div>
+            <div>The timer is set to 30 seconds.</div>
+            <div>Wrong answers carry a 1 point penalty.</div>
+          </div>
+          <div class="username-section">
+            <div class="username-heading"> Enter Username </div>
+            <div class="username-setup">
+              <div class="username-input">
+                <input type="text" id="username" [(ngModel)]="userName"/>
+              </div>
+              <div class="submit" (click)="onSubmit(1)">
+                <i class="fa fa-arrow-right"></i>
+              </div>
+            </div>
+            <div class="invalid-username" *ngIf="invalidUserName"> Invalid Username </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mode-section" (mouseenter)="onMouseEnter(2)" (mouseleave)="onMouseLeave(2)" [ngClass]="'mode' + 2">
+        <div class="mode-name" *ngIf="!m2hover">
+          Landing Soon
+        </div>
+        <div class="mode-details" *ngIf="m2hover">
+          <div class="mode-name" [ngClass]="'mode' + 2">
+            Landing Soon
+          </div>
+          <div class="description">
+            <p>New game mode on the way.</p>
+          </div>
+          <div class="username-section">
+          </div>
+        </div>
+      </div>
+
+      <div class="mode-section" (mouseenter)="onMouseEnter(3)" (mouseleave)="onMouseLeave(3)" [ngClass]="'mode' + 3">
+        <div class="mode-name" *ngIf="!m3hover">
+          Landing Soon
+        </div>
+        <div class="mode-details" *ngIf="m3hover">
+          <div class="mode-name" [ngClass]="'mode' + 3">
+            Landing Soon
+          </div>
+          <div class="description">
+            <p>New game mode on the way.</p>
+          </div>
+          <div class="username-section">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

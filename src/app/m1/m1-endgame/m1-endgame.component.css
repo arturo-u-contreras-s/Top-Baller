@@ -1,0 +1,359 @@
+.outer-container {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  height: 100%;
+}
+
+.left, .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  height: 100%;
+
+  border: 1px solid black;
+}
+
+.leaderboard, .podium {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  width: 80%;
+  height: 80%;
+  overflow: auto;
+
+  padding: 3%;
+
+  border-radius: 5%;
+}
+
+.leaderboard {
+  border: 3px solid black;
+}
+
+.podium {
+  gap: 40px;
+
+  border: 3px solid black;
+}
+
+.first-place {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  height: 60%;
+
+  border-radius: 5px;
+}
+
+.left-winner, .right-winner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+
+  height: 100%;
+}
+
+.right-winner {
+  width: 40%;
+
+  border: 3px solid #3f0596;
+  border-radius: 25px;
+}
+
+.left-winner img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+
+  border-radius: 10px;
+}
+
+.fp-un {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 90%;
+  height: 20%;
+
+  font-size: 60px;
+  
+  border: 3px solid #3f0596;
+  border-radius: 15px;
+  text-align: center;
+
+  background-color: #3f0596;
+  color:white;
+}
+
+.fp-score {
+  height: 50%;
+
+  font-size: 150px;
+  color:black;
+}
+
+.losers {
+  display: flex;
+  flex-direction: row;
+  gap:5px;
+
+  width: 100%;
+  height: 15%;
+}
+
+.loser {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 50%;
+
+  border: 3px solid black;
+  border-radius: 15px;
+}
+
+.loser-left, .loser-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+
+  text-align: center;
+}
+
+.loser-left {
+  width: 20%;
+}
+
+.loser-right {
+  width: 80%;
+}
+
+.loser-score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+
+  text-align: center;
+  font-size: 80px;
+}
+
+.place {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  height: 10%;
+  width: 100%;
+
+  font-size: 20px;
+  color:#890706;
+}
+
+.loser-un {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 45%;
+  width: 100%;
+
+  text-align: center;
+  font-size: 40px;
+}
+
+.see-lb {
+  width: 100%;
+  height: 4%;
+
+  color:#890706;
+  text-align: right;
+  font-size: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+
+  margin-top: 10px;
+
+  font-size: 50px;
+  color: #3f0596;
+
+  border-radius: 5%;
+
+  background-color: white;
+}
+
+.player {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  width: 90%;
+
+  color: black;
+  font-size: 30px;
+
+  border-bottom: 1px solid black;
+}
+
+.user-score {
+  display: flex;
+  justify-content: center;
+
+  width: 7%;
+
+  text-align: center;
+  color: #890706;
+
+  border: 2px solid black;
+  border-radius: 5%;
+
+  background-color: white;
+}
+
+.user-name {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  width: 70%;
+
+  background-color: white;
+}
+
+.go-home-section {
+  width: 100%;
+  height: 4%;
+}
+
+.go-home {
+  font-size: 20px;
+  text-align: right;
+  color:#890706;
+
+  cursor: pointer;
+}
+
+.go-home:hover {
+  color:#3f0596;
+}
+
+.player-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 70%;
+}
+
+.crown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 40%;
+  height: 20%;
+}
+
+img {
+  width: 150px;
+}
+
+.score-num {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 40%;
+  height: 50%;
+
+  font-size: 120px;
+
+  border: 7px solid #890706;
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+  height: 20%;
+
+  text-align: center;
+  color:#3f0596;
+
+  border: 3px solid black;
+  border-radius: 25px;
+}
+
+.top-baller {
+  font-size: 40px;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+  height: 10%;
+}
+
+button {
+  padding: 10px 20px;
+
+  font-family: "Bebas Neue", serif;
+  font-size: 20px;
+
+  border: 2px solid #890706;
+  border-radius: 5px;
+
+  background-color: white;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  border-color: black;
+
+  color: #3f0596;
+
+  transform: scale(1.05);
+}

@@ -1,0 +1,40 @@
+<div class="game-container">
+  <div class="left-wait" *ngIf="!gameR2G">
+    <div>GAME.</div>
+    <div>STARTING.</div>
+    <div>SOON.</div>
+  </div>
+  <div class="clubs" *ngIf="gameR2G">
+    <div class="clubs-list">
+      <div class="club-option" *ngFor="let club of mpClubs" [ngClass]="{ 'correct-guess': plus }" [ngClass]="{ 'wrong-guess': minus }">
+        <img [src]="club.logo" alt="{{ club.name }}" width="75" height="75">
+        {{ club.name }}
+      </div>
+    </div>
+  </div>
+
+  <div class="game-info">
+    <div class="timer" *ngIf="!gameR2G">
+      <pregame-timer (timerAlert)="pgTimerAlert()"></pregame-timer>
+    </div>
+    <div class="timer" *ngIf="gameR2G">
+      <timer (timerAlert)="timerAlert()"></timer>
+    </div>
+    <div class="score-info" *ngIf="gameR2G" [ngClass]="{ 'correct-guess': plus }" [ngClass]="{ 'wrong-guess': minus }">
+      <div class="score"> {{ score }} </div>
+    </div>
+  </div>
+
+  <div class="right-wait" *ngIf="!gameR2G">
+    <div>TOP BALLER</div>
+    <div>TOP BALLER</div>
+    <div>TOP BALLER</div>
+  </div>
+  <div class="players" *ngIf="gameR2G">
+    <div class="players-list">
+      <div class = "player-option" (click)="playerClicked(player)" *ngFor="let player of players" [ngClass]="{ 'correct-guess': plus }" [ngClass]="{ 'wrong-guess': minus }">
+        {{ player.name }}
+      </div>
+    </div>
+  </div>
+</div>
